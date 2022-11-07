@@ -25,7 +25,7 @@ namespace Maier_Teodora_Lab2.Pages.Authors
         }
 
         [BindProperty]
-        public Author Authors { get; set; }
+        public Author Author { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -36,7 +36,7 @@ namespace Maier_Teodora_Lab2.Pages.Authors
                 return Page();
             }
 
-            _context.Authors.Add(Authors);
+            _context.Author.Add(Author);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

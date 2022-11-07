@@ -8,41 +8,69 @@
 <h1>Create</h1>
 
 <h4>Book</h4>
-<hr />
+<hr/>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Book.Title" class="control-label"></label>
-                <input asp-for="Book.Title" class="form-control" />
+                <input asp-for="Book.Title" class="form-control"/>
                 <span asp-validation-for="Book.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.Authors" class="control-label">Authors</label>
-                <select asp-for="Book.Authors" class="form-control" asp-items="ViewBag.Authors">
+                <label asp-for="Book.Author" class="control-label">Authors</label>
+                <select asp-for="Book.Author" class="form-control" asp-items="ViewBag.Authors">
                 </select>
-                <span asp-validation-for="Book.Authors" class="text-danger"></span>
+                <span asp-validation-for="Book.Author" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Book.Price" class="control-label"></label>
-                <input asp-for="Book.Price" class="form-control" />
+                <input asp-for="Book.Price" class="form-control"/>
                 <span asp-validation-for="Book.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Book.PublishingDate" class="control-label"></label>
-                <input asp-for="Book.PublishingDate" class="form-control" />
+                <input asp-for="Book.PublishingDate" class="form-control"/>
                 <span asp-validation-for="Book.PublishingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.PublisherID" class="control-label">Publisher Name</label>
-                <select asp-for="Book.PublisherID" class="form-control" asp-items="ViewBag.PublisherID">
+                <label asp-for="Book.PublisherId" class="control-label">Publisher Name</label>
+                <select asp-for="Book.PublisherId" class="form-control" asp-items="ViewBag.Authors">
                 </select>
-                <span asp-validation-for="Book.PublisherID" class="text-danger"></span>
+                <span asp-validation-for="Book.PublisherId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <div class="table">
+                    <table>
+                        <tr>
+                        @{
+                            int cnt = 0;
+                            foreach (var cat in Model.AssignedCategoryDataList)
+                            {
+                                if (cnt++ % 3 == 0)
+                                {
+                                    @:</tr><tr>
+                                }
+                                @:<td>
+                                <input type="checkbox"
+                                       name="selectedCategories"
+                                       value="@cat.CategoryId"
+                                       @(Html.Raw(cat.Assigned ?
+                                           "checked=\"checked\"" : ""))/>
+                                @cat.CategoryId
+                                @: @cat.Name
+                                @:</td>
+                            }
+                            @:</tr>
+                        }
+                    </table>
+                </div>
             </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"/>
+            </div>
+
         </form>
     </div>
 </div>
@@ -52,5 +80,5 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 }
