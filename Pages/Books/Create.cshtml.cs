@@ -29,12 +29,14 @@ namespace Maier_Teodora_Lab2.Pages.Books
             return Page();
         }
 
-        [BindProperty] public Book Book { get; set; }
+        [BindProperty] 
+        public Book Book { get; set; }
 
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync(string[] selectedCategories)
         {
+            
             var newBook = new Book();
             if (selectedCategories != null)
             {
@@ -48,11 +50,20 @@ namespace Maier_Teodora_Lab2.Pages.Books
                     newBook.BookCategories.Add(catToAdd);
                 }
             }
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            
+            var validationErrors = ModelState.Values.Where(E => E.Errors.Count > 0)
+                .SelectMany(E => E.Errors)
+                .Select(E => E.ErrorMessage)
+                .ToList();
 
             if (await TryUpdateModelAsync<Book>(
                     newBook,
                     "Book",
-                    i => i.Title, i => i.Author,
+                    i => i.Title, i => i.AuthorID,
                     i => i.Price, i => i.PublishingDate, i => i.PublisherId))
             {
                 _context.Book.Add(newBook);

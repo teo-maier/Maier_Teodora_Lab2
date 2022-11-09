@@ -5,7 +5,13 @@
     <projectFile profileName="Maier_Teodora_Lab2">Maier_Teodora_Lab2.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5bdd5a-c969-4df1-9e09-b8e5100f1424" name="Changes" comment="add unknown files" />
+    <list default="true" id="2f5bdd5a-c969-4df1-9e09-b8e5100f1424" name="Changes" comment="change if statement argument">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Maier_Teodora_Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Maier_Teodora_Lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Book.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Books/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Books/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Create.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Books/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Index.cshtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +25,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1f6f390bc246f43f64a19835b0d7e69c2d8f7cd17815f5fcbb145b665bab8/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/333717bd1cce3876d133e8e23428a3dca892c18641b7eb745fe17d1eed102cbc/ExecutorFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/acf1b6abd0c65bfb4dd378fac91ee884d46073faa6295340469651abdca69/PageModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d555b6bc78df652895d9bf368762f415ad13deb21ca2dc977dd48593f46e2/RazorPageBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Pages/Categories/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" root0="FORCE_HIGHLIGHTING" />
@@ -125,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668024382537</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change if statement argument">
+      <created>1668026593224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668026593224</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +165,8 @@
     <MESSAGE value="Lab3-commit&amp;push" />
     <MESSAGE value="Realizati toate modificarile necesare astfel incat navigand la pagina Views/Categories/Index, pentru fiecare categorie afisata,la selectarea acesteia (click pe link) sa se afiseze toate cartile (titlu si autor) care fac parte din acea categorie" />
     <MESSAGE value="Rest of files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rest of files" />
+    <MESSAGE value="change if statement argument" />
+    <option name="LAST_COMMIT_MESSAGE" value="change if statement argument" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -173,6 +190,32 @@
           <properties documentPath="C:\Users\Teodora Maier\Desktop\FSEGA\Medii de programare\Maier_Teodora_Lab2\Pages\Categories\Index.cshtml.cs" initialLine="39" containingFunctionPresentation="method 'OnGetAsync'" />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Pages/Books/Create.cshtml.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\Users\Teodora Maier\Desktop\FSEGA\Medii de programare\Maier_Teodora_Lab2\Pages\Books\Create.cshtml.cs" initialLine="55" containingFunctionPresentation="method 'OnPostAsync'">
+            <startOffsets>
+              <option value="2074" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2296" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Pages/Books/Create.cshtml.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\Teodora Maier\Desktop\FSEGA\Medii de programare\Maier_Teodora_Lab2\Pages\Books\Create.cshtml.cs" initialLine="57" containingFunctionPresentation="method 'OnPostAsync'">
+            <startOffsets>
+              <option value="1874" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2060" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -180,5 +223,10 @@
         <PinnedItemInfo parentTag="Frame#Maier_Teodora_Lab2.Models.BookCategoriesPageModel.PopulateAssignedCategoryData" memberName="context" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="LaunchSettings">
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
