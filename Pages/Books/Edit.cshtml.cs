@@ -41,6 +41,7 @@ namespace Maier_Teodora_Lab2.Pages.Books
             });
             ViewData["Id"] = new SelectList(authorList, "Id", "FullName");
             ViewData["PublisherId"] = new SelectList(_context.Publisher, "Id", "PublisherName");
+            ViewData["AuthorID"] = new SelectList(_context.Author, "Id", "FullName");
 
             return Page();
         }
