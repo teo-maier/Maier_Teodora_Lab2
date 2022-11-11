@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,15 +19,57 @@ namespace Maier_Teodora_Lab2.Pages.Books
             _context = context;
         }
 
-        public IList<Book> Book { get;set; } = default!;
+        public IList<Book> Book { get; set; }
+        public BookData BookData { get; set; }
+        public int BookId { get; set; }
+        // public int CategoryID { get; set; }
+        public string TitleSort { get; set; }
+        public string AuthorSort { get; set; }
+        public string CurrentFilter { get; set; }
 
-        public async Task OnGetAsync()
+
+        public async Task OnGetAsync(int? id, string sortOrder, string searchString)
         {
-            if (_context.Book != null)
+            BookData = new BookData();
+
+            TitleSort = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+            AuthorSort = String.IsNullOrEmpty(sortOrder) ? "author_desc" : "";
+            CurrentFilter = searchString;
+
+            BookData.Books = await _context.Book
+                .Include(b => b.Publisher)
+                .Include(b => b.Author)
+                .Include(b => b.BookCategories)
+                .ThenInclude(b => b.Category)
+                .AsNoTracking()
+                .OrderBy(b => b.Title)
+                .ToListAsync();
+
+            if (!String.IsNullOrEmpty(searchString))
             {
-                Book = await _context.Book
-                    .Include(b=>b.Publisher)
-                    .ToListAsync();
+                BookData.Books = BookData.Books.Where(s => s.Author.FirstName.Contains(searchString)
+                                                           || s.Author.LastName.Contains(searchString)
+                                                           || s.Title.Contains(searchString));
+            }
+
+            if (id != null)
+            {
+                BookId = id.Value;
+                Book book = BookData.Books
+                    .Where(i => i.ID == id.Value).Single();
+                BookData.Categories = book.BookCategories.Select(s => s.Category);
+            }
+
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    BookData.Books = BookData.Books.OrderByDescending(s =>
+                        s.Title);
+                    break;
+                case "author_desc":
+                    BookData.Books = BookData.Books.OrderByDescending(s =>
+                        s.Author.FullName);
+                    break;
             }
         }
     }

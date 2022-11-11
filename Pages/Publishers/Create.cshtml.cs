@@ -38,7 +38,6 @@ namespace Maier_Teodora_Lab2.Pages.Publishers
 
             _context.Publisher.Add(Publisher);
             await _context.SaveChangesAsync();
-
             return RedirectToPage("./Index");
         }
     }

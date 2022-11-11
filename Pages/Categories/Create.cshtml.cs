@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Maier_Teodora_Lab2.Data;
 using Maier_Teodora_Lab2.Models;
 
-namespace Maier_Teodora_Lab2.Pages.Authors
+namespace Maier_Teodora_Lab2.Pages.Categories
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace Maier_Teodora_Lab2.Pages.Authors
         }
 
         [BindProperty]
-        public Author Author { get; set; }
+        public Category Category { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -36,7 +36,7 @@ namespace Maier_Teodora_Lab2.Pages.Authors
                 return Page();
             }
 
-            _context.Author.Add(Author);
+            _context.Category.Add(Category);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

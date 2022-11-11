@@ -20,16 +20,16 @@ namespace Maier_Teodora_Lab2.Pages.Authors
         }
 
         [BindProperty]
-      public Author Authors { get; set; }
+      public Author Author { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Authors == null)
+            if (id == null || _context.Author == null)
             {
                 return NotFound();
             }
 
-            var authors = await _context.Authors.FirstOrDefaultAsync(m => m.Id == id);
+            var authors = await _context.Author.FirstOrDefaultAsync(m => m.Id == id);
 
             if (authors == null)
             {
@@ -37,23 +37,23 @@ namespace Maier_Teodora_Lab2.Pages.Authors
             }
             else 
             {
-                Authors = authors;
+                Author = authors;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Authors == null)
+            if (id == null || _context.Author == null)
             {
                 return NotFound();
             }
-            var authors = await _context.Authors.FindAsync(id);
+            var authors = await _context.Author.FindAsync(id);
 
             if (authors != null)
             {
-                Authors = authors;
-                _context.Authors.Remove(Authors);
+                Author = authors;
+                _context.Author.Remove(Author);
                 await _context.SaveChangesAsync();
             }
 

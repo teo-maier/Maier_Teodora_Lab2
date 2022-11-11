@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Maier_Teodora_Lab2.Data;
 using Maier_Teodora_Lab2.Models;
 
-namespace Maier_Teodora_Lab2.Pages.Authors
+namespace Maier_Teodora_Lab2.Pages.Categories
 {
     public class EditModel : PageModel
     {
@@ -21,21 +21,21 @@ namespace Maier_Teodora_Lab2.Pages.Authors
         }
 
         [BindProperty]
-        public Author Author { get; set; } = default!;
+        public Category Category { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Author == null)
+            if (id == null || _context.Category == null)
             {
                 return NotFound();
             }
 
-            var authors =  await _context.Author.FirstOrDefaultAsync(m => m.Id == id);
-            if (authors == null)
+            var category =  await _context.Category.FirstOrDefaultAsync(m => m.ID == id);
+            if (category == null)
             {
                 return NotFound();
             }
-            Author = authors;
+            Category = category;
             return Page();
         }
 
@@ -48,7 +48,7 @@ namespace Maier_Teodora_Lab2.Pages.Authors
                 return Page();
             }
 
-            _context.Attach(Author).State = EntityState.Modified;
+            _context.Attach(Category).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace Maier_Teodora_Lab2.Pages.Authors
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!AuthorsExists(Author.Id))
+                if (!CategoryExists(Category.ID))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace Maier_Teodora_Lab2.Pages.Authors
             return RedirectToPage("./Index");
         }
 
-        private bool AuthorsExists(int id)
+        private bool CategoryExists(int id)
         {
-          return _context.Author.Any(e => e.Id == id);
+          return _context.Category.Any(e => e.ID == id);
         }
     }
 }

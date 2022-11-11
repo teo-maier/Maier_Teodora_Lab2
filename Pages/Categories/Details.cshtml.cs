@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Maier_Teodora_Lab2.Data;
 using Maier_Teodora_Lab2.Models;
 
-namespace Maier_Teodora_Lab2.Pages.Books
+namespace Maier_Teodora_Lab2.Pages.Categories
 {
     public class DetailsModel : PageModel
     {
@@ -19,23 +19,23 @@ namespace Maier_Teodora_Lab2.Pages.Books
             _context = context;
         }
 
-        public Book Book { get; set; }
+      public Category Category { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.Category == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book.FirstOrDefaultAsync(m => m.ID == id);
-            if (book == null)
+            var category = await _context.Category.FirstOrDefaultAsync(m => m.ID == id);
+            if (category == null)
             {
                 return NotFound();
             }
             else 
             {
-                Book = book;
+                Category = category;
             }
             return Page();
         }
