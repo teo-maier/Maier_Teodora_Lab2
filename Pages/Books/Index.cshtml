@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @model Maier_Teodora_Lab2.Pages.Books.IndexModel
 
 @{
@@ -28,7 +28,7 @@
                 @Html.DisplayNameFor(model => model.Book[0].Title)
             </a>
         </th>
-        <th colspan="2">
+        <th>
             <a asp-page="./Index" asp-route-sortOrder="@Model.AuthorSort">
                 @Html.DisplayNameFor(model => model.Book[0].Author)
             </a>
@@ -45,7 +45,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Book[0].BookCategories)
         </th>
-
+        <th>
+            Action
+        </th>
     </tr>
     </thead>
     <tbody>
@@ -62,7 +64,7 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Author.FirstName)
+                @Html.DisplayFor(modelItem => item.Author.FullName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
@@ -77,8 +79,7 @@
                 @{
                     foreach (var category in item.BookCategories)
                     {
-                        @category.Category.ID
-                        @: @category.Category.CategoryName <br/>
+                         @category.Category.CategoryName <br/>
                     }
                 }
             </td>

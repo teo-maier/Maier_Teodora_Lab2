@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Maier_Teodora_Lab2.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -56,10 +56,11 @@ namespace Maier_Teodora_Lab2.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(6, 2)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
                     PublishingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PublisherId = table.Column<int>(type: "int", nullable: true),
-                    AuthorID = table.Column<int>(type: "int", nullable: true)
+                    PublisherId = table.Column<int>(type: "int", nullable: false),
+                    AuthorID = table.Column<int>(type: "int", nullable: false),
+                    CategoryID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -68,12 +69,19 @@ namespace Maier_Teodora_Lab2.Migrations
                         name: "FK_Book_Author_AuthorID",
                         column: x => x.AuthorID,
                         principalTable: "Author",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Book_Category_CategoryID",
+                        column: x => x.CategoryID,
+                        principalTable: "Category",
+                        principalColumn: "ID");
                     table.ForeignKey(
                         name: "FK_Book_Publisher_PublisherId",
                         column: x => x.PublisherId,
                         principalTable: "Publisher",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -82,8 +90,8 @@ namespace Maier_Teodora_Lab2.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BookId = table.Column<int>(type: "int", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                    BookId = table.Column<int>(type: "int", nullable: true),
+                    CategoryId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -92,20 +100,23 @@ namespace Maier_Teodora_Lab2.Migrations
                         name: "FK_BookCategory_Book_BookId",
                         column: x => x.BookId,
                         principalTable: "Book",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                     table.ForeignKey(
                         name: "FK_BookCategory_Category_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Category",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Book_AuthorID",
                 table: "Book",
                 column: "AuthorID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Book_CategoryID",
+                table: "Book",
+                column: "CategoryID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Book_PublisherId",
@@ -132,10 +143,10 @@ namespace Maier_Teodora_Lab2.Migrations
                 name: "Book");
 
             migrationBuilder.DropTable(
-                name: "Category");
+                name: "Author");
 
             migrationBuilder.DropTable(
-                name: "Author");
+                name: "Category");
 
             migrationBuilder.DropTable(
                 name: "Publisher");

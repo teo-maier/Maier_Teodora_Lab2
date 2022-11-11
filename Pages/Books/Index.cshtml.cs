@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,13 +22,13 @@ namespace Maier_Teodora_Lab2.Pages.Books
         public IList<Book> Book { get; set; }
         public BookData BookData { get; set; }
         public int BookId { get; set; }
-        public int CategoryId { get; set; }
+        // public int CategoryID { get; set; }
         public string TitleSort { get; set; }
         public string AuthorSort { get; set; }
         public string CurrentFilter { get; set; }
 
 
-        public async Task OnGetAsync(int? id, int? categoryId, string sortOrder, string searchString)
+        public async Task OnGetAsync(int? id, string sortOrder, string searchString)
         {
             BookData = new BookData();
 

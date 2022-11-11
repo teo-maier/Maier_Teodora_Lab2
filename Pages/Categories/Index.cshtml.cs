@@ -30,17 +30,17 @@ namespace Maier_Teodora_Lab2.Pages.Categories
             if (_context.Category != null)
             {
                 CategoriesData = new CategoriesIndexData();
-                CategoriesData.Categories = await _context.Category
-                    .Include(i => i.Books)
-                    .ThenInclude(c => c.Author)
+                CategoriesData.CategoriesIndex = await _context.Category
+                    .Include(i => i.BookCategories)
+                    .ThenInclude(c => c.Book.Author)
                     .OrderBy(i => i.CategoryName)
                     .ToListAsync();
                 if (id != null)
                 {
                     CategoryId = id.Value;
-                    Category category = CategoriesData.Categories
+                    Category category = CategoriesData.CategoriesIndex
                         .Where(i => i.ID == id.Value).Single();
-                    CategoriesData.Books = category.Books;
+                    CategoriesData.BookCategoriesIndex = category.BookCategories;
                 }
             }
         }

@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Maier_Teodora_Lab2.Migrations
 {
     [DbContext(typeof(Maier_Teodora_Lab2Context))]
-    [Migration("20221107144951_AssignedCategoryData")]
-    partial class AssignedCategoryData
+    [Migration("20221111215115_AlterCategoryTable_AddBookCategoriesField")]
+    partial class AlterCategoryTable_AddBookCategoriesField
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.10")
+                .HasAnnotation("ProductVersion", "6.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -53,13 +53,13 @@ namespace Maier_Teodora_Lab2.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int?>("AuthorID")
+                    b.Property<int>("AuthorID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(6, 2");
+                        .HasColumnType("decimal(6,2)");
 
-                    b.Property<int?>("PublisherId")
+                    b.Property<int>("PublisherId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("PublishingDate")
@@ -80,16 +80,16 @@ namespace Maier_Teodora_Lab2.Migrations
 
             modelBuilder.Entity("Maier_Teodora_Lab2.Models.BookCategory", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
-                    b.Property<int>("BookId")
+                    b.Property<int?>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -139,11 +139,15 @@ namespace Maier_Teodora_Lab2.Migrations
                 {
                     b.HasOne("Maier_Teodora_Lab2.Models.Author", "Author")
                         .WithMany("Books")
-                        .HasForeignKey("AuthorID");
+                        .HasForeignKey("AuthorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Maier_Teodora_Lab2.Models.Publisher", "Publisher")
                         .WithMany("Books")
-                        .HasForeignKey("PublisherId");
+                        .HasForeignKey("PublisherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Author");
 
@@ -154,15 +158,11 @@ namespace Maier_Teodora_Lab2.Migrations
                 {
                     b.HasOne("Maier_Teodora_Lab2.Models.Book", "Book")
                         .WithMany("BookCategories")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BookId");
 
                     b.HasOne("Maier_Teodora_Lab2.Models.Category", "Category")
                         .WithMany("BookCategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Book");
 

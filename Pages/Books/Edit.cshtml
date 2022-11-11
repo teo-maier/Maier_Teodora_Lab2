@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model Maier_Teodora_Lab2.Pages.Books.EditModel
 
 @{
@@ -15,34 +15,35 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Book.ID"/>
             <div class="form-group">
-                <label asp-for="Book.Title" class="control-label"></label>
+                <label asp-for="Book.Title" class="control-label">Book Title</label>
                 <input asp-for="Book.Title" class="form-control"/>
                 <span asp-validation-for="Book.Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.AuthorID" class="control-label"></label>
+                <label asp-for="Book.AuthorID" class="control-label">Author Name</label>
                 <select asp-for="Book.AuthorID" class="form-control" asp-items="ViewBag.AuthorID">
                 </select>
                 <span asp-validation-for="Book.AuthorID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.Price" class="control-label"></label>
+                <label asp-for="Book.Price" class="control-label">Book Price</label>
                 <input asp-for="Book.Price" class="form-control"/>
                 <span asp-validation-for="Book.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.PublishingDate" class="control-label"></label>
+                <label asp-for="Book.PublishingDate" class="control-label">Publishing Date</label>
                 <input asp-for="Book.PublishingDate" class="form-control"/>
                 <span asp-validation-for="Book.PublishingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Book.PublisherId" class="control-label"></label>
+                <label asp-for="Book.PublisherId" class="control-label">Publisher Name</label>
                 <select asp-for="Book.PublisherId" class="form-control" asp-items="ViewBag.PublisherId">
                 </select>
                 <span asp-validation-for="Book.PublisherId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <div class="table">
+                    <label asp-for="Book.BookCategories" class="control-label">Book Categories</label>
                     <table>
                         <tr>
                         @{

@@ -2,6 +2,7 @@
 
 public class CategoriesIndexData
 {
-    public IEnumerable<Category> Categories { get; set; }
-    public IEnumerable<Book> Books { get; set; }
+    public IEnumerable<Category> CategoriesIndex { get; set; }
+    public IEnumerable<BookCategory> BookCategoriesIndex { get; set; }
+
 }

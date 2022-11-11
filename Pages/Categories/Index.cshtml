@@ -20,7 +20,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.CategoriesData.Categories)
+    @foreach (var item in Model.CategoriesData.CategoriesIndex)
     {
         string selectedRow = "";
         if (item.ID == Model.CategoryId)
@@ -42,12 +42,12 @@
     }
     </tbody>
 </table>
-@if (Model.CategoriesData.Books != null)
+@if (Model.CategoriesData.BookCategoriesIndex != null)
 {
     <h3>Books By Category</h3>
     <table class="table">
 
-        @foreach (var item in Model.CategoriesData.Categories)
+        @foreach (var item in Model.CategoriesData.CategoriesIndex)
         {
             string selectedRow = "";
             if (item.ID == Model.CategoryId)
@@ -55,13 +55,12 @@
                 selectedRow = "table-success";
             }
             <tr class="@selectedRow">
-
                 <td>
                     @{
-                        foreach (var b in item.Books)
+                        foreach (var b in item.BookCategories)
                         {
-                            @b.Title
-                            @: @b.Author.FullName
+                            @b.Book.Title
+                            @: @b.Book.Author.FullName
 
                             <br/>
                         }

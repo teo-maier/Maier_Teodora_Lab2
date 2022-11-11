@@ -17,6 +17,8 @@
     <None Remove="Pages\NewFolder\**" />
     <Content Remove="Pages\Index.cshtml" />
     <Compile Remove="Pages\Index.cshtml.cs" />
+    <Content Remove="Pages\Index_old.cshtml" />
+    <Compile Remove="Pages\Index_old.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,12 +26,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Books\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Books\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Books\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Books\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Books\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Books" />
   </ItemGroup>
 
 </Project>

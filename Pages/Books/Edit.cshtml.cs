@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Maier_Teodora_Lab2.Models;
@@ -40,9 +40,9 @@ namespace Maier_Teodora_Lab2.Pages.Books
                 FullName = x.LastName + " " + x.FirstName
             });
             ViewData["Id"] = new SelectList(authorList, "Id", "FullName");
-            ViewData["PublisherId"] = new SelectList(_context.Publisher, "Id", "PublisherName");
             ViewData["AuthorID"] = new SelectList(_context.Author, "Id", "FullName");
-
+            ViewData["PublisherId"] = new SelectList(_context.Publisher, "Id", "PublisherName");
+            Book = book;
             return Page();
         }
 

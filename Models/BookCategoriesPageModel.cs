@@ -13,7 +13,7 @@ public class BookCategoriesPageModel : PageModel
         var allCategories = context.Category;
         // The list is not null or empty
         var bookCategories = new HashSet<int>(
-            book.BookCategories.Select(c => c.CategoryId)); //
+            book.BookCategories.Select(c=>c.Category.ID)); //
         AssignedCategoryDataList = new List<AssignedCategoryData>();
         foreach (var cat in allCategories)
         {
