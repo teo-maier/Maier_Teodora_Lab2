@@ -59,10 +59,14 @@ namespace Maier_Teodora_Lab2.Pages.Books
                     i => i.PublisherId
                 ))
             {
+                // var Author = new Author();
+                // Author = _context.Author.Find(newBook.AuthorID);
+                // newBook.Author = Author;
                 _context.Book.Add(newBook);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
             }
+
             PopulateAssignedCategoryData(_context, newBook);
             return Page();
         }

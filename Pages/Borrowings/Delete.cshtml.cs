@@ -21,6 +21,9 @@ namespace Maier_Teodora_Lab2.Pages.Borrowings
 
         [BindProperty]
       public Borrowing Borrowing { get; set; } = default!;
+      public Member Member { get; set; } = default!;
+      public Book Book { get; set; } = default!;
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -37,6 +40,13 @@ namespace Maier_Teodora_Lab2.Pages.Borrowings
             }
             else 
             {
+                Member = _context.Member.Find(borrowing.MemberID);
+                Book = _context.Book.Find(borrowing.BookID);
+                Book.Title = Book.Title +
+                             " - " +
+                             _context.Author.Find(Book.AuthorID).LastName +
+                             " " +
+                             _context.Author.Find(Book.AuthorID).FirstName;
                 Borrowing = borrowing;
             }
             return Page();

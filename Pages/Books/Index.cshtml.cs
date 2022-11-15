@@ -22,7 +22,6 @@ namespace Maier_Teodora_Lab2.Pages.Books
         public IList<Book> Book { get; set; }
         public BookData BookData { get; set; }
         public int BookId { get; set; }
-        // public int CategoryID { get; set; }
         public string TitleSort { get; set; }
         public string AuthorSort { get; set; }
         public string CurrentFilter { get; set; }

@@ -20,6 +20,8 @@ namespace Maier_Teodora_Lab2.Pages.Books
         }
 
         public Book Book { get; set; }
+        public Author Author { get; set; }
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -33,10 +35,13 @@ namespace Maier_Teodora_Lab2.Pages.Books
             {
                 return NotFound();
             }
-            else 
+            else
             {
+                Author = _context.Author.Find(book.AuthorID);
+
                 Book = book;
             }
+
             return Page();
         }
     }

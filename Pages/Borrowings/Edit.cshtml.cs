@@ -20,8 +20,7 @@ namespace Maier_Teodora_Lab2.Pages.Borrowings
             _context = context;
         }
 
-        [BindProperty]
-        public Borrowing Borrowing { get; set; } = default!;
+        [BindProperty] public Borrowing Borrowing { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,14 +29,27 @@ namespace Maier_Teodora_Lab2.Pages.Borrowings
                 return NotFound();
             }
 
-            var borrowing =  await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
+            var borrowing = await _context.Borrowing.FirstOrDefaultAsync(m => m.ID == id);
             if (borrowing == null)
             {
                 return NotFound();
             }
+
+            var bookList = _context.Book
+                .Include(b => b.Author)
+                .Select(x => new
+                {
+                    x.ID,
+                    BookFullName = x.Title +
+                                   " - " +
+                                   x.Author.LastName +
+                                   " " +
+                                   x.Author.FirstName
+                });
+
             Borrowing = borrowing;
-           ViewData["BookID"] = new SelectList(_context.Book, "ID", "ID");
-           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "ID");
+            ViewData["BookID"] = new SelectList(bookList, "ID", "BookFullName");
+            ViewData["MemberID"] = new SelectList(_context.Member, "ID", "FullName");
             return Page();
         }
 
@@ -73,7 +85,7 @@ namespace Maier_Teodora_Lab2.Pages.Borrowings
 
         private bool BorrowingExists(int id)
         {
-          return (_context.Borrowing?.Any(e => e.ID == id)).GetValueOrDefault();
+            return (_context.Borrowing?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
