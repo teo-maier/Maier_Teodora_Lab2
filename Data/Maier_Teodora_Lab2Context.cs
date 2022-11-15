@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Maier_Teodora_Lab2.Models;
 
 namespace Maier_Teodora_Lab2.Data
 {
@@ -18,5 +19,9 @@ namespace Maier_Teodora_Lab2.Data
         public DbSet<Maier_Teodora_Lab2.Models.Category> Category { get; set; }
 
         public DbSet<Maier_Teodora_Lab2.Models.BookCategory> BookCategory { get; set; }
+
+        public DbSet<Maier_Teodora_Lab2.Models.Member>? Member { get; set; }
+
+        public DbSet<Maier_Teodora_Lab2.Models.Borrowing>? Borrowing { get; set; }
     }
 }

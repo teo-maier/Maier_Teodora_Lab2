@@ -7,38 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2f5bdd5a-c969-4df1-9e09-b8e5100f1424" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Maier_Teodora_Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Maier_Teodora_Lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Maier_Teodora_Lab2Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Maier_Teodora_Lab2Context.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maier_Teodora_Lab2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Maier_Teodora_Lab2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221107143807_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221107143807_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221107144511_PublishingDate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221107144511_PublishingDate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221107144951_AssignedCategoryData.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221107144951_AssignedCategoryData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221109193358_BookCategory.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20221109193358_BookCategory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/Maier_Teodora_Lab2ContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/BookCategoriesPageModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BookCategoriesPageModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/BookCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BookCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/ViewModels/CategoriesIndexData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ViewModels/CategoriesIndexData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Authors/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Authors/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Create.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Create.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Delete.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Delete.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Details.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Details.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Edit.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Edit.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Index.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Categories/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Categories/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Categories/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Categories/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Index.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Publishers/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Publishers/Create.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/Maier_Teodora_Lab2ContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/Maier_Teodora_Lab2ContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +25,12 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1f6f390bc246f43f64a19835b0d7e69c2d8f7cd17815f5fcbb145b665bab8/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29a5fee33a6bca22fae07ab9ccd1f7c6cd56a3ea69a3a0df28f9f8da754ff/ExpressionMetadataProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/333717bd1cce3876d133e8e23428a3dca892c18641b7eb745fe17d1eed102cbc/ExecutorFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3612a83a6f82271281cdbdd64eab4852568b47a11e31a17bbbdb758094b3e016/TagHelperRunner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37a954845b52703c5cce1aacf8fa1292378878e82bf68c4c4b5effc447316e9/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/538811d0fba15c61b743814ea8b7193d48cfbb84a1a53c5db2512b1b329330/DbSet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5fd9ff3950cc6fe36d7d74bfe94e0d4c632ad467b1cb0462447d8f3f5f824/Migration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/acf1b6abd0c65bfb4dd378fac91ee884d46073faa6295340469651abdca69/PageModel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,9 +38,18 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cb1bf12ab1909296607f7f51884fbfa1786304de91f9643ae4f79a2ed2e4b23/InputTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d555b6bc78df652895d9bf368762f415ad13deb21ca2dc977dd48593f46e2/RazorPageBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d89af35b91759d4af5224cf7dcdec507847787c4317765d4f6ba0e3d548ebe7/ModelExplorer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Pages/Categories/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Pages/Categories/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Index_old.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Teodora Maier/Desktop/FSEGA/Medii de programare/Maier_Teodora_Lab2/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" root0="FORCE_HIGHLIGHTING" />
@@ -86,24 +67,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.37285715&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.37285715",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;sqlserver.localdb&quot;,
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "sqlserver.localdb",
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Maier_Teodora_Lab2">
     <configuration name="Maier_Teodora_Lab2" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Maier_Teodora_Lab2.csproj" />
@@ -152,6 +133,7 @@
       <workItem from="1668016915996" duration="7960000" />
       <workItem from="1668024950730" duration="314000" />
       <workItem from="1668184244107" duration="10624000" />
+      <workItem from="1668521119895" duration="4331000" />
     </task>
     <task id="LOCAL-00001" summary="Lab3-commit&amp;push">
       <created>1667835091650</created>
@@ -273,19 +255,6 @@
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Pages/Categories/Index.cshtml.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\Teodora Maier\Desktop\FSEGA\Medii de programare\Maier_Teodora_Lab2\Pages\Categories\Index.cshtml.cs" initialLine="39" containingFunctionPresentation="method 'OnGetAsync'">
-            <startOffsets>
-              <option value="1380" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1392" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Pages/Publishers/Index.cshtml.cs</url>
           <line>38</line>
           <properties documentPath="C:\Users\Teodora Maier\Desktop\FSEGA\Medii de programare\Maier_Teodora_Lab2\Pages\Publishers\Index.cshtml.cs" initialLine="38" containingFunctionPresentation="method 'OnGetAsync'">
@@ -312,5 +281,9 @@
         <watch expression="Enumerable.SelectMany()" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

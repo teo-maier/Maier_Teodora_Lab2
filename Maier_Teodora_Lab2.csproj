@@ -26,6 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
@@ -45,6 +47,8 @@
 
   <ItemGroup>
     <Folder Include="Pages\Books" />
+    <Folder Include="Pages\Borrowings" />
+    <Folder Include="Pages\Members" />
   </ItemGroup>
 
 </Project>
