@@ -4,6 +4,7 @@ using Maier_Teodora_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Maier_Teodora_Lab2.Migrations
 {
     [DbContext(typeof(Maier_Teodora_Lab2Context))]
-    partial class Maier_Teodora_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20221123105435_Member_Validation")]
+    partial class Member_Validation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,8 +67,7 @@ namespace Maier_Teodora_Lab2.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 

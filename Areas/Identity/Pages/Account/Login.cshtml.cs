@@ -107,6 +107,7 @@ namespace Maier_Teodora_Lab2.Areas.Identity.Pages.Account
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
+            ModelState.Clear(); //Reset the model state
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout

@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Maier_Teodora_Lab2.Data;
 using Maier_Teodora_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Maier_Teodora_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
+    
     public class DeleteModel : PageModel
     {
         private readonly Maier_Teodora_Lab2.Data.Maier_Teodora_Lab2Context _context;

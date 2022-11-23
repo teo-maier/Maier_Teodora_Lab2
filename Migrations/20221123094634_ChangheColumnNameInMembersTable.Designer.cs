@@ -4,6 +4,7 @@ using Maier_Teodora_Lab2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Maier_Teodora_Lab2.Migrations
 {
     [DbContext(typeof(Maier_Teodora_Lab2Context))]
-    partial class Maier_Teodora_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20221123094634_ChangheColumnNameInMembersTable")]
+    partial class ChangheColumnNameInMembersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,8 +67,7 @@ namespace Maier_Teodora_Lab2.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
@@ -152,20 +153,17 @@ namespace Maier_Teodora_Lab2.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
                     b.Property<string>("Address")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar(70)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");

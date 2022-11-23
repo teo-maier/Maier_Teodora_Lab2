@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Maier_Teodora_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Maier_Teodora_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : BookCategoriesPageModel
     {
         private readonly Maier_Teodora_Lab2.Data.Maier_Teodora_Lab2Context _context;
@@ -59,9 +61,6 @@ namespace Maier_Teodora_Lab2.Pages.Books
                     i => i.PublisherId
                 ))
             {
-                // var Author = new Author();
-                // Author = _context.Author.Find(newBook.AuthorID);
-                // newBook.Author = Author;
                 _context.Book.Add(newBook);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");

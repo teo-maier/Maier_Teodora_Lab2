@@ -6,9 +6,19 @@ namespace Maier_Teodora_Lab2.Models
     public class Book
     {
         public int ID { get; set; }
-        [Display(Name = "Book Title")] public string Title { get; set; }
-        [Column(TypeName = "decimal(6, 2)")] public decimal Price { get; set; }
-        [Display(Name = "Publishing Date")] [DataType(DataType.Date)] public DateTime PublishingDate { get; set; }
+
+        [StringLength(150, MinimumLength = 3)]
+        [Display(Name = "Book Title")]
+        public string Title { get; set; }
+
+        [Column(TypeName = "decimal(6, 2)")]
+        [Range(0.01, 500)]
+        public decimal Price { get; set; }
+
+        [Display(Name = "Publishing Date")]
+        [DataType(DataType.Date)]
+        public DateTime PublishingDate { get; set; }
+
         public int PublisherId { get; set; }
         [Display(Name = "Publisher")] public Publisher? Publisher { get; set; }
 
