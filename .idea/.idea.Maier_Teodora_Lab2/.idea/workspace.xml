@@ -5,22 +5,7 @@
     <projectFile profileName="Maier_Teodora_Lab2">Maier_Teodora_Lab2.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5bdd5a-c969-4df1-9e09-b8e5100f1424" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Maier_Teodora_Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Maier_Teodora_Lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Create.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Details.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Books/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Books/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Borrowings/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Borrowings/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Borrowings/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Borrowings/Details.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Borrowings/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Borrowings/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Borrowings/Edit.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Borrowings/Edit.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Members/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Members/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="2f5bdd5a-c969-4df1-9e09-b8e5100f1424" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,24 +61,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.37285715",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.37285715&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "sqlserver.localdb",
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;sqlserver.localdb&quot;,
+      &quot;sqlserver&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Maier_Teodora_Lab2">
     <configuration name="Maier_Teodora_Lab2" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Maier_Teodora_Lab2.csproj" />
@@ -142,7 +127,7 @@
       <workItem from="1668016915996" duration="7960000" />
       <workItem from="1668024950730" duration="314000" />
       <workItem from="1668184244107" duration="10624000" />
-      <workItem from="1668521119895" duration="8071000" />
+      <workItem from="1668521119895" duration="8567000" />
     </task>
     <task id="LOCAL-00001" summary="Lab3-commit&amp;push">
       <created>1667835091650</created>
